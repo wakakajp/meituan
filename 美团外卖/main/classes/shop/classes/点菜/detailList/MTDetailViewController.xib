@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTDetailViewController">
+            <connections>
+                <outlet property="imageViewHeight" destination="zUg-jD-jyn" id="MlJ-yX-rX5"/>
+                <outlet property="topImageView" destination="DI9-VK-IbS" id="2yd-vC-548"/>
+                <outlet property="tv" destination="2yS-0n-eBY" id="u2u-QW-KFA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snip20160810_9" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-VK-IbS">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="280"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="zUg-jD-jyn"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2yS-0n-eBY">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ZD0-GO-pGN"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2yS-0n-eBY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2uQ-Qr-Kxz"/>
+                <constraint firstAttribute="trailing" secondItem="2yS-0n-eBY" secondAttribute="trailing" id="31Q-qz-sha"/>
+                <constraint firstAttribute="trailing" secondItem="DI9-VK-IbS" secondAttribute="trailing" id="AXh-f3-jCq"/>
+                <constraint firstItem="2yS-0n-eBY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BUd-ze-6Rj"/>
+                <constraint firstItem="DI9-VK-IbS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Knv-PF-FTn"/>
+                <constraint firstAttribute="bottom" secondItem="2yS-0n-eBY" secondAttribute="bottom" id="oWJ-WW-61P"/>
+                <constraint firstItem="DI9-VK-IbS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sJq-er-cqH"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Snip20160810_9" width="1576" height="928"/>
+    </resources>
+</document>

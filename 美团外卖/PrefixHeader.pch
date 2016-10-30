@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  美团外卖
+//
+//  Created by 哇咔咔 on 16/8/4.
+//  Copyright © 2016年 jp. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// 屏蔽C文件的宏
+#ifdef __OBJC__
+
+// 通知的名称
+#define MTAddFoodToCarViewNotification @"MTAddFoodToCarViewNotification"
+// 需要添加的菜品模型key
+#define MTAddFoodKey @"MTAddFoodKey"
+// 动画的起点key!
+#define MTStartPointKey @"MTStartPointKey"
+
+#import "Masonry.h"
+
+#import "CZAdditions.h"
+/**
+ * 调试的宏
+ */
+#ifdef DEBUG // 测试!
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define NSLog(...) // 打印信息也是非常耗性能!
+#endif
+
+#endif
+
+#endif /* PrefixHeader_pch */

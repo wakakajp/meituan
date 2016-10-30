@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTCarView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTCarView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quW-LY-h6a">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="jeX-O0-xFs"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUe-0u-oCy">
+                    <rect key="frame" x="500" y="0.0" width="100" height="46"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="6Mb-J9-hob"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="还差 20.00">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="checkAccount:" destination="iN0-l3-epB" eventType="touchUpInside" id="N9A-Wx-E1q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRz-yp-p9w">
+                    <rect key="frame" x="10" y="-10" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="0hU-u2-IeL"/>
+                        <constraint firstAttribute="height" constant="50" id="fL6-mA-MhX"/>
+                    </constraints>
+                    <state key="normal" image="button_shoppingCart_empty"/>
+                    <state key="selected" image="button_shoppingCart_noEmpty"/>
+                    <connections>
+                        <action selector="showShoppingCarList:" destination="iN0-l3-epB" eventType="touchUpInside" id="RHT-01-QIf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6a-RQ-ZtG">
+                    <rect key="frame" x="42" y="-9" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="EL0-vF-NnB"/>
+                        <constraint firstAttribute="height" constant="16" id="QXR-JW-eyr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <state key="normal" title="999" backgroundImage="icon_food_count_bg"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购物车空空如也~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eba-MX-OXO">
+                    <rect key="frame" x="70" y="0.0" width="430" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tRz-yp-p9w" secondAttribute="bottom" constant="6" id="2xn-nk-rvf"/>
+                <constraint firstAttribute="trailing" secondItem="quW-LY-h6a" secondAttribute="trailing" id="3qP-J7-JU6"/>
+                <constraint firstAttribute="bottom" secondItem="B6a-RQ-ZtG" secondAttribute="bottom" constant="39" id="45m-AC-llT"/>
+                <constraint firstAttribute="bottom" secondItem="Eba-MX-OXO" secondAttribute="bottom" id="GvY-l1-t3s"/>
+                <constraint firstItem="Eba-MX-OXO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HHq-RA-dss"/>
+                <constraint firstItem="quW-LY-h6a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Obc-y3-d5X"/>
+                <constraint firstItem="Eba-MX-OXO" firstAttribute="leading" secondItem="tRz-yp-p9w" secondAttribute="trailing" constant="10" id="RUp-vt-RIt"/>
+                <constraint firstItem="tRz-yp-p9w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="TV7-7F-PFp"/>
+                <constraint firstAttribute="bottom" secondItem="zUe-0u-oCy" secondAttribute="bottom" id="W1E-4R-T0v"/>
+                <constraint firstItem="zUe-0u-oCy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WQE-ed-P2z"/>
+                <constraint firstItem="quW-LY-h6a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XGu-pp-e27"/>
+                <constraint firstAttribute="trailing" secondItem="zUe-0u-oCy" secondAttribute="trailing" id="oEV-L5-YxD"/>
+                <constraint firstItem="B6a-RQ-ZtG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="42" id="qdQ-cJ-HWy"/>
+                <constraint firstItem="zUe-0u-oCy" firstAttribute="leading" secondItem="Eba-MX-OXO" secondAttribute="trailing" id="udG-Pd-bRl"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="checkaccountBtn" destination="zUe-0u-oCy" id="XQB-Cx-VTu"/>
+                <outlet property="numberBtn" destination="B6a-RQ-ZtG" id="sPx-qH-r6V"/>
+                <outlet property="priceLbl" destination="Eba-MX-OXO" id="rIy-EH-qbd"/>
+                <outlet property="shoppingCarBtn" destination="tRz-yp-p9w" id="FU1-o5-6yv"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_shoppingCart_empty" width="50" height="50"/>
+        <image name="button_shoppingCart_noEmpty" width="50" height="50"/>
+        <image name="icon_food_count_bg" width="16" height="16"/>
+    </resources>
+</document>
